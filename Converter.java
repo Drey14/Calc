@@ -111,8 +111,29 @@ class ArabicToRomul {
             case 10:
                 intRomul = intRomul + "X";
                 break;
+            case 20:
+                intRomul = intRomul + "XX";
+                break;
+            case 30:
+                intRomul = intRomul + "XXX";
+                break;
+            case 40:
+                intRomul = intRomul + "XL";
+                break;
             case 50:
                 intRomul = intRomul + "L";
+                break;
+            case 60:
+                intRomul = intRomul + "LX";
+                break;
+            case 70:
+                intRomul = intRomul + "LXX";
+                break;
+            case 80:
+                intRomul = intRomul + "LXXX";
+                break;
+            case 90:
+                intRomul = intRomul + "XC";
                 break;
             case 100:
                 intRomul = intRomul + "C";
@@ -121,22 +142,49 @@ class ArabicToRomul {
                 break;
         }
 
-
-        if (a >= 11 && a <= 49) {
-            int cel = a / 10;
+        if (a >= 11 && a <= 19) {
             int ost = a % 10;
-            for (int i = 0; i < cel; i++) {
-                intRomul = intRomul + "X";
-            }
+            intRomul = intRomul + "X";
             ArabicToRomul.goTo(ost);
         }
-        if (a >= 51 && a <= 99) {
-            System.out.println("99");
-            int cel = a / 10;
+        if (a >= 21 && a <= 29) {
             int ost = a % 10;
-            for (int i = 0; i < cel; i++) {
-                intRomul = intRomul + "L";
-            }
+            intRomul = intRomul + "XX";
+            ArabicToRomul.goTo(ost);
+        }
+        if (a >= 31 && a <= 39) {
+            int ost = a % 10;
+            intRomul = intRomul + "XXX";
+            ArabicToRomul.goTo(ost);
+        }
+        if (a >= 41 && a <= 49) {
+            int ost = a % 10;
+            intRomul = intRomul + "XL";
+            ArabicToRomul.goTo(ost);
+        }
+        if (a >= 51 && a <= 59) {
+            int ost = a % 10;
+            intRomul = intRomul + "L";
+            ArabicToRomul.goTo(ost);
+        }
+        if (a >= 61 && a <= 69) {
+            int ost = a % 10;
+            intRomul = intRomul + "LX";
+            ArabicToRomul.goTo(ost);
+        }
+        if (a >= 71 && a <= 79) {
+            int ost = a % 10;
+            intRomul = intRomul + "LXX";
+            ArabicToRomul.goTo(ost);
+        }
+        if (a >= 81 && a <= 89) {
+            int ost = a % 10;
+            intRomul = intRomul + "LXXX";
+            ArabicToRomul.goTo(ost);
+        }
+        if (a >= 91 && a <= 99) {
+            int ost = a % 10;
+            intRomul = intRomul + "XC";
             ArabicToRomul.goTo(ost);
         }
     }
